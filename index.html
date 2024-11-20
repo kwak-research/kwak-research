@@ -1,63 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-</head>
-<body>
-    <header>
-        <h1>Jin Hwan Kwak</h1>
-    </header>
-    <section>
-        <h2>About Me</h2>
-        <p>I am currently an Army Doctor and specialize in internal medicine. My PhD is from Yeungnam University and my advisor is Dr. Jangwon Son. Before that, I completed my undergraduate studies at Yeungnam University. My research interests include automation and efficiency of diagnosis, AI, primary prevention to increase healthspan, endocrinology, and cardiology. </p>
-    </section>
-    <section>
-        <h2>Education </h2>
-        <p>Yeungnam University<br>Ph.D. in Internal Medicine</p>
-        <p>Yeungnam University<br>B.S in Medicine</p>
-        
-    </section>
-    <section>
-        <h2>Experience & Board certification</h2>
-        <p>Military Doctor Captin, ROK army(2023.04.26-)</p>
-        <p>Resident,Yeungnam University Medical Center, Daegu, Republic of Korea(2023)</p>
-        <p>Internship,Yeungnam University Medical Center, Daegu, Republic of Korea(2020)</p>
-        <p>Korean Society of Echocardiography, adult(2023.03)</p>
-    </section>
-    <footer>
-        <p>Contact: jinzk1005@gmail.com</p>
-    </footer>
-</body>
+    <script>
+    fetch("partials/head.html")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Failed to load head.html: " + response.statusText);
+        }
+        return response.text();
+    })
+    .then(data => {
+        document.head.insertAdjacentHTML("beforeend", data);
+    })
+    .catch(error => {
+        console.error("Error loading head.html:", error);
+    });
+    </script>
+    </head>
+
+
+    <body>
+    <div class="top">
+
+       <header>
+            <h1>Jin Hwan Kwak</h1>
+        </header>
+    </div> 
+
+     <!-- 중간 영역: 좌우로 나뉨 -->
+    <div class="middle">
+        <div class="left">
+        <section>
+            <h2>About Me</h2>
+            <p style="margin-left: 5px;">I am currently an Military Physician in Republic of Korea army and certified specialist in internal medicine. I earned my Ph.D. from Yeungnam University, where I was advised by Professor <a href="https://scholar.google.com/citations?user=5y1GousAAAAJ&hl=ko&oi=ao" target="_blank"> Jang-Won Son</a>. Before that, I completed my undergraduate studies at Yeungnam University. My research interests include <em>the automation and efficiency of diagnosis, artifical intelligence(AI), primary prevention to increase healthy life years(HLY), endocrinology, and cardiology</em>. </p>
+        </section>
+        <section>
+            <h2>Education</h2>
+            <p><b>Yeungnam University</b></p>
+            <p style="margin-left: 5px;">Ph.D. in Internal Medicine<br>B.S in Medicine</p>
+            
+        </section>
+        <section>
+            <h2>Experience & Board certification</h2>
+            <p style="margin-left: 5px;">Military Physician, Captin, ROK army (2023.04.26-)<br>
+            Resident,Yeungnam University Medical Center, Daegu, Republic of Korea (2023)<br>
+            Internship,Yeungnam University Medical Center, Daegu, Republic of Korea (2020)<br><br>
+            Echocardiography Board-Certified Physician, Korean Society of Echocardiography, Adult (2023.03)</p>
+        </section>
+        <section>
+            <h2>Publication</h2>
+            <ol style="margin-left: 5px;">
+                <li><a href="https://e-jcvi.org/" target="_blank">Real Time Three-Dimensional Transthoracic Echocardiographic Segmental Volume Analysis: Quantitative and Objective Tool for Assessing Regional Left Ventricle Wall Motion in Ischemic Heart Disease Patient</a>  <i>, Journal of Cardiovascular Imaging (forthcoming)</i></li>
+                
+            </ol>
+
+            
+        </section>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="right">
+        <ul>
+            <li><a href="pages/page1.html">About my researches</a></li>
+            <li>항목 2</li>
+            <li>항목 3</li>
+            <li>항목 4</li>
+        </ul>
+        </div>
+   </div>
+    <!-- Footer를 삽입할 요소 추가 -->
+   <div class="bottom">
+   <div id="footer"></div>
+    <script>
+            
+            fetch("partials/footer.html")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to load footer.html: " + response.statusText);
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+        })
+        .catch(error => {
+            console.error("Error loading footer.html:", error);
+        });
+    </script>    
+    </div>
+    </body>
 </html>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        color: #333;
-        margin: 0;
-        padding: 20px;
-        line-height: 1.6;
-    }
-    header {
-        text-align: center;
-        padding: 10px;
-        background-color: #0073e6;
-        color: white;
-    }
-    section {
-        margin: 20px 0;
-    }
-    footer {
-        text-align: center;
-        margin-top: 20px;
-    }
-    a {
-        color: #0073e6;
-        text-decoration: none;
-    }
-    a:hover {
-        text-decoration: underline;
-    }
-</style>
+
+

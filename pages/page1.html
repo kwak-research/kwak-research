@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        fetch("../partials/head.html")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to load head.html: " + response.statusText);
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.head.insertAdjacentHTML("beforeend", data);
+        })
+        .catch(error => {
+            console.error("Error loading head.html:", error);
+        });
+    </script>
+</head>
+
+
+<body>
+    <div class="top">
+
+        <header>
+            <h1>About my researches</h1>
+         </header>
+     </div> 
+
+    <div class="middle">
+    <div class="left">
+        <section>
+            <ol>
+                
+                <h2><ol><li><p class="style-three"></p>3D TTE RWMA study</li></ol></h2>
+                <p class="style-three"><b>Real Time Three-Dimensional Transthoracic Echocardiographic Segmental Volume Analysis: Quantitative and Objective Tool for Assessing Regional Left Ventricle Wall Motion in Ischemic Heart Disease Patient<i>, Journal of Cardiovascular Imaging (forthcoming)</i></b> </p>
+                <p class="style-three"><b>1.Methods </b></p>
+                <img src="../images/figure1.jpg" alt="Logo" class="responsive-image">
+                <img src="../images/figure2.jpg" alt="Logo" class="responsive-image">
+                <p class="style-three"><b>2.Strengths </b></p>
+                <p class="style-two">
+                    <b>1) Quantitative and Objective Tool for Assessing RWMA</b>
+                    <br>
+                    Three-dimensional echocardiography (3DE) provides a quantitative and objective approach for evaluating regional wall motion abnormalities (RWMA), surpassing traditional two-dimensional echocardiography (2DE) in precision.
+                    <br>
+                    <br>
+                    <b>2)Efficient and Rapid Data Acquisition</b>
+                    <br>
+                    The method allows for comprehensive left ventricular (LV) assessment from a single apical window without relying on geometric assumptions, enabling faster and more accurate measurements.
+                    <br>
+                    <br>
+                    <b>3)Minimized Impact of Patient Positioning</b>
+                    <br>
+                    <br>
+                    3DE imaging reduces errors caused by bone structures or patient positioning, ensuring consistent and reliable results.
+
+                <p class="style-three"><b>2.Results </b></p>
+                     <p class="style-two"><b>1) Statistical Differentiation Between Groups</b>
+                    <div class="image-container">
+                     <img src="../images/figure3.jpg" alt="Logo">
+                    </div>
+                <p class="style-two"><b>2) Optimal SVEF Cut-off Value: 44%</b>
+                    <img src="../images/figure4.jpg" alt="Logo" class="responsive-image">
+                    <p style="margin-left: 40px";>
+                    <p class="style-two">
+                            <b>Sensitivity: 75%</b>
+                    <br>
+                    <b>Specificity: 73.9%</b>
+                    </p>
+                    </p>
+                    <p class="style-two">
+                    In patients with <b>a global EF (Ejection Fraction) below 40%</b>, the cut-off value was 36% (Sensitivity: 74%, Specificity: 73%).
+                    <br>For patients <b>with EF 40% or greater</b>, the cut-off value was 46% (Sensitivity: 70%, Specificity: 70%).
+                    <br>
+                    <p>
+                    <b>Consistency with Previous Research</b></p>
+                    <p class="style-two">
+                    The study corroborates prior findings, demonstrating that 3DE can reliably predict coronary artery involvement and serves as a valuable tool for RWMA evaluation and ischemic heart disease (IHD) management.
+                    </p>
+                </p>
+            </ol>
+        </section>
+         
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="right">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/page1.html">About my researches</a></li>
+            <li><a href="../pages/page2.html">Echocardiography</a></li>
+            <li><a href="../pages/page3.html">Internal medicine</a></li>
+            <li><a href="../pages/page4.html">Paper review with GPT (statistics)</a></li>
+        </ul>
+    </div>
+    </div>
+    <div class="bottom">
+        <div id="footer"></div>
+        <script>
+                
+                fetch("partials/footer.html")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Failed to load footer.html: " + response.statusText);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            })
+            .catch(error => {
+                console.error("Error loading footer.html:", error);
+            });
+        </script>    
+    </div>
+   
+</body>
+
+</html>
