@@ -99,16 +99,19 @@
         text-decoration: underline;
     }
 
-
+    
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css">
+    <img src="{{ site.baseurl }}/images/logo.png" alt="Logo">
+    
 
 
 
    /* images */
     .responsive-image {
-        width: 100%; /* 원하는 너비 */
-        height: auto; /* 비율 유지 */
+        width: 60%; /* 원하는 너비 */
+        height: 100px /* 비율 유지 */
     }
     .image-container {
-        width: 100%; /* 부모 요소 너비 */
-        height: 200px; /* 부모 요소 높이 */
+        width: 6px; /* 부모 요소 너비 */
+        height: 20px /* 부모 요소 높이 */
     }

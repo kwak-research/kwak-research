@@ -3,7 +3,7 @@
 
 <head>
     <script>
-        fetch("../partials/head.html")
+         fetch("/kwak-research/partials/head.html")
         .then(response => {
             if (!response.ok) {
                 throw new Error("Failed to load head.html: " + response.statusText);
@@ -36,8 +36,8 @@
                 <h2><ol><li><p class="style-three"></p>3D TTE RWMA study</li></ol></h2>
                 <p class="style-three"><b>Real Time Three-Dimensional Transthoracic Echocardiographic Segmental Volume Analysis: Quantitative and Objective Tool for Assessing Regional Left Ventricle Wall Motion in Ischemic Heart Disease Patient<i>, Journal of Cardiovascular Imaging (forthcoming)</i></b> </p>
                 <p class="style-three"><b>1.Methods </b></p>
-                <img src="../images/figure1.jpg" alt="Logo" class="responsive-image">
-                <img src="../images/figure2.jpg" alt="Logo" class="responsive-image">
+                <img src="/kwak-research/images/figure1.jpg" alt="Logo" class=".responsive-image">
+                <img src="/kwak-research/images/figure2.jpg" alt="Logo" class=".image-container">
                 <p class="style-three"><b>2.Strengths </b></p>
                 <p class="style-two">
                     <b>1) Quantitative and Objective Tool for Assessing RWMA</b>
@@ -58,10 +58,11 @@
                 <p class="style-three"><b>2.Results </b></p>
                      <p class="style-two"><b>1) Statistical Differentiation Between Groups</b>
                     <div class="image-container">
-                     <img src="../images/figure3.jpg" alt="Logo">
+                        <img src="/kwak-research/images/figure1" alt="Logo">
+
                     </div>
                 <p class="style-two"><b>2) Optimal SVEF Cut-off Value: 44%</b>
-                    <img src="../images/figure4.jpg" alt="Logo" class="responsive-image">
+                    <img src="/kwak-research/images/figure1" alt="Logo" class="responsive-image">
                     <p style="margin-left: 40px";>
                     <p class="style-two">
                             <b>Sensitivity: 75%</b>
@@ -88,11 +89,11 @@
 
     <div class="right">
         <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../pages/page1.html">About my researches</a></li>
-            <li><a href="../pages/page2.html">Echocardiography</a></li>
-            <li><a href="../pages/page3.html">Internal medicine</a></li>
-            <li><a href="../pages/page4.html">Paper review with GPT (statistics)</a></li>
+            <li><a href="/kwak-research/index.html">Home</a></li>
+            <li><a href="/kwak-research/pages/page1.html">About my researches</a></li>
+            <li><a href="/kwak-research./pages/page2.html">Echocardiography</a></li>
+            <li><a href="/kwak-research/pages/page3.html">Internal medicine</a></li>
+            <li><a href="/kwak-research/pages/page4.html">Paper review with GPT (statistics)</a></li>
         </ul>
     </div>
     </div>
@@ -100,7 +101,7 @@
         <div id="footer"></div>
         <script>
                 
-                fetch("partials/footer.html")
+                fetch("/kwak-research/partials/footer.html")
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Failed to load footer.html: " + response.statusText);
