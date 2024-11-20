@@ -1,0 +1,5 @@
+title: "My Research Site"
+description: "Jin Hwan Kwak's Research Portfolio"
+baseurl: "/kwak-research" # 레포지토리 이름
+url: "https://kwak-research.github.io" # 사이트 URL
+theme: minima # 기본 테마
